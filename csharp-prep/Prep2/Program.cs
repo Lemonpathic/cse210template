@@ -2,9 +2,9 @@ using System;
 
 class Grade
 {
-    private int _grade;
+    private float _grade;
     private string letterGrade;
-    public int _Grade{
+    public float _Grade{
         get{ return _grade; }
         set{
             if(value <= 0){
@@ -16,7 +16,7 @@ class Grade
         }
 
     }
- private void getLetterGrade(int value)
+ private void getLetterGrade(float value)
     {
         if (value >= 90)
         {
@@ -38,6 +38,18 @@ class Grade
         {
             letterGrade = "F";
         }
+        if (value >= 60 && value < 93){
+            char secondIntChar = value.ToString()[1];
+            int secondInt = int.Parse(secondIntChar.ToString());
+            
+            if (secondInt < 3){
+                letterGrade += "-";
+            }
+            else if (secondInt >= 7){
+                System.Console.WriteLine(secondInt);
+                letterGrade += "+";
+            }
+        }
     }
 }
 
@@ -57,7 +69,7 @@ class Program
                 System.Console.WriteLine("Enter a percentage");
                 string percentage = Console.ReadLine();
 
-                if(int.TryParse(percentage, out int parsedVal)){
+                if(float.TryParse(percentage, out float parsedVal)){
                     Grade grade = new Grade();
                     grade._Grade = parsedVal;
                 }

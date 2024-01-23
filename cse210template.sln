@@ -51,6 +51,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sandbox", "sandbox", "{822D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sandbox", "sandbox\Sandbox\Sandbox.csproj", "{EEAC0066-03B3-4CEA-B4FD-58FA2DF422A4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Learning", "Learning", "{39CD4FDB-DA45-45DF-B44E-37BDEDCBA842}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

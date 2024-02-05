@@ -5,22 +5,22 @@
 
     public class Entry
     {
-        public string Response;
-        public string Prompt;
-        public string Date = DateTime.Now.ToString("MMM d yyyy");
-        
-        public string entry;
+        private readonly string Response;
+        private readonly string Prompt;
+        private string Date = DateTime.Now.ToString("MMM d yyyy");
+
+        private string entry;
         public string exportString;
 
         // Constructors
         public Entry()
         {
-            string randomPrompt = GetPrompt();
+            var randomPrompt = GetPrompt();
             Console.WriteLine(randomPrompt);
-            string something = Console.ReadLine();
+            var response = Console.ReadLine();
         
-            entry = CreateEntryString(something, randomPrompt);
-            exportString = CreateExportString(something, randomPrompt);
+            entry = CreateEntryString(response, randomPrompt);
+            exportString = CreateExportString(response, randomPrompt);
         }
 
         public Entry(string entries)
@@ -37,17 +37,17 @@
         // Methods
         private string CreateEntryString(string import, string prompt)
         {
-            string finalEntry = ($"Date:\n" +
-                                 $"{Date}\n" +
-                                 $"Prompt of the entry: '{prompt}' \n" +
-                                 $"--------------------------ENTRY------------------------\n" +
-                                 $"{import}");
+            var finalEntry = ($"Date:\n" +
+                              $"{Date}\n" +
+                              $"Prompt of the entry: '{prompt}' \n" +
+                              $"--------------------------ENTRY------------------------\n" +
+                              $"{import}");
             return finalEntry;
         }
 
-        public string CreateExportString(string import, string prompt)
+        private string CreateExportString(string import, string prompt)
         {
-            string exportString = $"{Date}|{Prompt}|{import}";
+            var exportString = $"{Date}|{Prompt}|{import}";
             return exportString;
         }
 
@@ -56,10 +56,10 @@
             Console.WriteLine(entry + "\n");
         }
 
-        public string GetPrompt()
+        private string GetPrompt()
         {
             // I DID USE CHATGPT FOR A LIST OF PROMPTS, I HAD BORING PROMPTS 
-          List<string> prompts = new List<string>()
+          var prompts = new List<string>()
 {
     "How was your day?",
     "Who did you meet?",
@@ -195,9 +195,9 @@
 };
 
 
-            Random random = new Random();
-            int randomIndex = random.Next(0, prompts.Count);
-            string randomPrompt = prompts[randomIndex];
+            var random = new Random();
+            var randomIndex = random.Next(0, prompts.Count);
+            var randomPrompt = prompts[randomIndex];
 
             return randomPrompt;
         }

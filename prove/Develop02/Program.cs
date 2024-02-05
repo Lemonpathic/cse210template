@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 class Program
 {
-    string filePath = "C:\\Users\\goofy\\Schooling\\Semester 1 (2 Year)\\cse210template\\prove\\Develop02\\files\\output.txt";
+    string filePath = "output.txt";
 
     public Journal journal;
 
@@ -61,8 +61,8 @@ class Program
     {
         Console.WriteLine("1. Create Entry");
         Console.WriteLine("2. Display Journal");
-        Console.WriteLine("3. Save to File");
-        Console.WriteLine("4. Load from File");
+        Console.WriteLine("3. Saving");
+        Console.WriteLine("4. Loading");
         Console.WriteLine("5. Exit");
     }
     private void SaveToFile()

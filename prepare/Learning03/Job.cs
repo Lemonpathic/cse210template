@@ -6,10 +6,10 @@ namespace Learning03;
 
 public class Job
 {
-    public string company;
-    public string jobTitle;
-    public string startYear;
-    public string endYear;
+    private string company;
+    private string jobTitle;
+    private string startYear;
+    private string endYear;
 
     public Job(string company, string jobTitle, string startYear, string endYear)
     {

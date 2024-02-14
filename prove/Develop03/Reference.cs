@@ -6,18 +6,19 @@ public class Reference
 {
     private string book;
     private string chapter;
-    private string[] verses;
+    private List<string> verses = new List<string>();
+    private List<int> intVerses;
     private string exportString;
-    public Reference(string book, string chapter, string[] verseRef, string[] verses)
+    public Reference(string book, string chapter, List<string> verseRef, List<string> verses)
     {
         this.book = book;
         this.chapter = chapter;
         this.verses = verses;
-        
+        this.intVerses = verseRef.Select(int.Parse).ToList();
 
-        if (verseRef.Length > 1)
+        if (verseRef.Count > 1)
         {
-            this.exportString = $"{book} {this.chapter}: {verseRef[0]}-{verseRef[verseRef.Length - 1]}";
+            this.exportString = $"{book} {this.chapter}: {verseRef[0]}-{verseRef[verseRef.Count - 1]}";
         }
         else
         {
@@ -32,7 +33,7 @@ public class Reference
         return book;
     }
 
-    public string[] GetVerses()
+    public List<string> GetVerses()
     {
         return verses;
     }
@@ -46,5 +47,9 @@ public class Reference
     {
         return exportString;
     }
-    
+
+    public int returnLowestVerese()
+    {
+        return intVerses.Min();
+    }
 }

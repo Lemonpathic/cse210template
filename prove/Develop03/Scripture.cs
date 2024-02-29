@@ -53,7 +53,7 @@ public class Scripture
             var (randomIndex,mastered) = GenerateRandom();
             if (mastered)
             {
-                return;
+                Environment.Exit(0);
             }
             words[randomIndex].Hide();
         }

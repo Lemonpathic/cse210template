@@ -55,6 +55,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Learning", "Learning", "{39
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningCar", "prepare\LearningCar\LearningCar.csproj", "{C77617FF-DF48-4396-86B2-5948E414BE67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgressBar", "prepare\ProgressBar\ProgressBar.csproj", "{EA11555A-5D8C-4B47-8E48-A6AC024574B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{C77617FF-DF48-4396-86B2-5948E414BE67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C77617FF-DF48-4396-86B2-5948E414BE67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C77617FF-DF48-4396-86B2-5948E414BE67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA11555A-5D8C-4B47-8E48-A6AC024574B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA11555A-5D8C-4B47-8E48-A6AC024574B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA11555A-5D8C-4B47-8E48-A6AC024574B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA11555A-5D8C-4B47-8E48-A6AC024574B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -166,6 +172,7 @@ Global
 		{C2C5352A-8750-4B63-95E5-D1577108A28E} = {8FDD8556-0FDA-4920-86BF-75DB92231881}
 		{EEAC0066-03B3-4CEA-B4FD-58FA2DF422A4} = {822D3A2D-4D08-4B87-B823-B0F5AF179C70}
 		{C77617FF-DF48-4396-86B2-5948E414BE67} = {7BEA976B-BFBC-44D1-8368-C604B3058109}
+		{EA11555A-5D8C-4B47-8E48-A6AC024574B9} = {7BEA976B-BFBC-44D1-8368-C604B3058109}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D0D7CD8B-959E-4DF4-9FDD-451211BBA12F}

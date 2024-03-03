@@ -114,15 +114,15 @@ namespace Develop04
 
             questions.AddRange(new string[]
             {
-                "Why was this experience meaningful to you?",
-                "Have you ever done anything like this before?",
-                "How did you get started?",
-                "How did you feel when it was complete?",
-                "What made this time different than other times when you were not as successful?",
-                "What is your favorite thing about this experience?",
-                "What could you learn from this experience that applies to other situations?",
-                "What did you learn about yourself through this experience?",
-                "How can you keep this experience in mind in the future?"
+                "Why was this experience meaningful to you",
+                "Have you ever done anything like this before",
+                "How did you get started",
+                "How did you feel when it was complete",
+                "What made this time different than other times when you were not as successful",
+                "What is your favorite thing about this experience",
+                "What could you learn from this experience that applies to other situations",
+                "What did you learn about yourself through this experience",
+                "How can you keep this experience in mind in the future"
             });
         }
 
@@ -173,9 +173,17 @@ namespace Develop04
             timer.Start();
             while (!timer._isFinished)
             {
-                Console.WriteLine(GenerateRandomQuestion(questions));
-                Thread.Sleep(5000);
+                Console.Write(GenerateRandomQuestion(questions) +"...");
+                for (int i = 5; i > 0; i--)
+                {
+                    Console.Write(i);
+                    Thread.Sleep(1000);
+                    Console.Write("\b \b");
+                }
+                Console.WriteLine("");
             }
+            
+            
             base.EndDisplay("Reflection Exercise", input);
         }
     }
@@ -209,9 +217,12 @@ namespace Develop04
         {
             BuildList();
             base.Display("Listing Activity");
-            Console.WriteLine(GenerateRandom(prompts));
+            
             Console.Write("How long would you like to do this exercise for (in seconds): ");
             var input = int.Parse(Console.ReadLine());
+            
+            Console.WriteLine(GenerateRandom(prompts));
+
             Timer timer = new Timer(input);
             timer.Start();
 

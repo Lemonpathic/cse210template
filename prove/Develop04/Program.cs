@@ -9,7 +9,8 @@ class Program
         Console.WriteLine("Choose an activity:\n" +
                           "1.Breathing Activity \n" +
                           "2.Reflecting Activity \n" +
-                          "3.Listing Activity \n");
+                          "3.Listing Activity \n" +
+                          "4.Quit\n");
         
         Console.Write("Select an activity from the list:");
         var input = Console.ReadLine();
@@ -26,6 +27,9 @@ class Program
             
             case "3":
                 new HolyGhostMoments().Display(null);
+                break;
+            case "4":
+                Environment.Exit(0);
                 break;
         }
     }

@@ -1,9 +1,17 @@
 using System;
+using Develop05;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop05 World!");
+        var quest = new Quest();
+
+        while (quest.finished == false)
+        {
+            quest.Menu();
+        }
+        
     }
-}
+
+    }

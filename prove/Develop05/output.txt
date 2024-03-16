@@ -1,0 +1,5 @@
+0
+EG|/|Church|/|Go there|/|10
+SG|/|Read today|/|Today i need to read|/|5|/|False
+CG|/|Go to the temple|/|go to the temple|/|10|/|0|/|3|/|50
+SG|/|Chuckle|/|have some fun|/|6|/|False

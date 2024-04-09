@@ -1,6 +1,9 @@
 ﻿namespace Final;
 
-public class Buffer
+public static class Buffer
 {
-    
+    public static string GetBuffer()
+    {
+        return "   ";
+    }
 }

@@ -1,21 +1,9 @@
 ﻿namespace Final;
 
-public class Menu
+public class App
 {
-    private List<Flashcard> flashcards = new List<Flashcard>();
+    public bool isFinished = false;
+    protected string buffer = Buffer.GetBuffer();
 
-    public Menu()
-    {
-        
-    }
-
-    public void DisplayMenu()
-    {
-        Console.WriteLine("-----[HOME]-----\n" +
-                          "Choose and option from the menu: \n" +
-                          "\t1. Create Flashcard Set\n" +
-                          "\t2. Review Flashcards \n" +
-                          "\t3. Visit The Shop \n" +
-                          "\t4. Quit");
-    }
 }
+
